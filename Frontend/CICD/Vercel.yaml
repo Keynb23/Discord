@@ -20,7 +20,7 @@ jobs:
       - name: Deploy to Vercel
         env:
           # Matches the name you set in GitHub Secrets
-          VERCEL_TOKEN: ${{ secrets.NEWDISCORDTOKEN }}
+          VERCEL_TOKEN: ${{ secrets.NewDiscordToken }}
         # --prod: Deploys to production
         # --yes: Skips confirmation
         run: vercel --prod --token=$VERCEL_TOKEN --yes

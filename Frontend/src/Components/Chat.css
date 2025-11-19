@@ -1,0 +1,114 @@
+/* Frontend/src/Components/Chat.css */
+.Chat-Container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    background-color: var(--bg1);
+}
+
+.Chat-Header {
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-bottom: 2px solid var(--ac1);
+    color: var(--tx1);
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 5%;
+}
+
+.Chat-Header h2 {
+    color: var(--ac1);
+}
+
+.Messages-List {
+    flex: 1;
+    /* Takes up all space between header and input */
+    width: 100%;
+    overflow-y: auto;
+    /* Enables scrolling */
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+    gap: 5px;
+}
+
+/* --- Chat Bubbles --- */
+.MessageBubbleThem {
+    background-color: var(--bg2);
+    /* Grey */
+    color: var(--tx1);
+    padding: 12px 18px;
+    border-radius: 18px 18px 18px 0;
+    /* Pointy bottom-left */
+    max-width: 70%;
+    align-self: flex-start;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;;
+    margin-left: 2.5rem;
+}
+
+.MessageBubbleYou {
+    background-color: var(--ac1);
+    /* Light Purple */
+    color: var(--tx1);
+    /* Dark text for contrast */
+    padding: 12px 18px;
+    border-radius: 18px 18px 0 18px;
+    /* Pointy bottom-right */
+    max-width: 70%;
+    align-self: flex-end;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;;
+    margin-right: 3.5rem;
+}
+
+/* --- Input Area --- */
+.Text-Bar {
+    padding: 20px;
+    background-color: var(--bg1);
+    /* Darkest background for input area */
+    border-top: 1px solid var(--bg2);
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+input {
+    flex: 1;
+    /* Grow to fill space */
+    min-height: 45px;
+    background-color: var(--bg2);
+    border: 1px solid var(--ac1);
+    border-radius: 8px;
+    padding: 0 15px;
+    color: var(--tx1);
+    font-size: 1rem;
+}
+
+input::placeholder {
+    color: var(--tx2);
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--tx1);
+    box-shadow: 0 0 5px var(--ac1);
+}
+
+.SendBtn {
+    height: 45px;
+    padding: 0 25px;
+    background-color: var(--ac1);
+    color: var(--bg1);
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.SendBtn:hover {
+    background-color: var(--tx1);
+    /* Turn white on hover */
+}

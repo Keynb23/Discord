@@ -1,0 +1,46 @@
+/* Frontend/src/Components/ChatRoom.css */
+.ChatRoom-Container {
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.ChatRoom-Nav h2 {
+    margin-bottom: 20px;
+    color: var(--ac1); /* Accent color for the header */
+    text-align: center;
+}
+
+.ChatRoom-List {
+    list-style: none;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.ChatRoom-Item {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--ac1); /* Your original border style */
+    border-radius: 8px;
+    cursor: pointer;
+    color: var(--tx2); /* Slightly dimmer text for inactive */
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.ChatRoom-Item:hover {
+    background-color: var(--ac1);
+    color: var(--bg1);
+    transform: translateX(5px); /* subtle slide effect */
+}
+
+/* Active State - matches the Logic in ChatRoom.jsx */
+.ChatRoom-Item.active {
+    background-color: var(--ac1);
+    color: var(--bg1); /* Black text on purple bg */
+    box-shadow: 0 0 10px var(--act2); /* Glow effect using your darker purple */
+}

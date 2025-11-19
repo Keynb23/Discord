@@ -1,0 +1,29 @@
+/* Frontend/src/App.css */
+
+.App-Container {
+  display: flex;
+  flex-direction: row; /* Forces side-by-side layout */
+  height: 100vh;       /* Full screen height */
+  width: 100vw;        /* Full screen width */
+  overflow: hidden;    /* Prevents scrolling the whole page */
+  background-color: var(--bg1);
+}
+
+/* The Sidebar Wrapper */
+.GroupChats {
+  flex: 0 0 280px;     /* Fixed width: doesn't grow, doesn't shrink, exactly 280px */
+  height: 100%;
+  border-right: 2px solid var(--ac1); /* Optional: Divider line */
+  background-color: var(--bg1);       /* Ensure sidebar has a background */
+}
+
+/* The Main Chat Wrapper */
+.ChatSection {
+  flex: 1;             /* MAGIC FIX: This makes it take up ALL remaining space */
+  height: 100%;
+  display: flex;       /* Ensures the Chat component inside stretches too */
+  flex-direction: column;
+  width: auto;         
+  margin: 0;
+  max-width: none;     
+}

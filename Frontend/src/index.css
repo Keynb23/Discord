@@ -1,0 +1,28 @@
+/* Index.css(global styles) */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  min-height: 1000vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg1);
+  color: var(--tx1);
+  overflow-x: hidden;
+}
+
+:root {
+  --bg1: #121212;
+  --bg2: #636262;
+  --bg3: #200123;
+  --tx1: #FFFFFF;
+  --tx2: #CCCCCC;
+  --ac1: #ed721af5;
+  --act2: #6403da;
+  --err: #b90022;
+}
+
